@@ -1,36 +1,31 @@
-var clock;
+// set the date we're counting down to
+var target_date = new Date('October, 23, 2018').getTime();
 
-$(document).ready(function() {
-  var clock;
+// variables for time units
+var days, hours, minutes, seconds;
 
-  clock = $('.clock').FlipClock({
-        clockFace: 'DailyCounter',
-        autoStart: false,
-        callbacks: {
-          stop: function() {
-            $('.message').html('The clock has stopped!')
-          }
-        }
-    });
-    var today= new Date();
-    var d = new Date('11-1-2018');
-    clock.setTime(d.getTime()/1000-today.getTime()/1000);
-    clock.setCountdown(true);
-    clock.start();
+// get tag element
+var countdown = document.getElementById('countdown');
 
-});
+// update the tag with id "countdown" every 1 second
+setInterval(function () {
 
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
 
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
 
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
 
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
 
-$(document).ready(function() {
-$("section").mousemove(function(e) {
-var width = $(this).innerWidth();
-var height = $(this).innerHeight();
-var pixelToMove = (width/height)*30;
-var newValueX = (e.pageX / width) * pixelToMove;
-var newValueY = (e.pageY / height) * pixelToMove;
-$(this).css('background-position', (newValueX*3.5) + '%' + ' ' + (newValueY*0.5) + '%');
-});
-});
+    // format countdown string + set tag value
+    countdown.innerHTML = '<span class="days">' + days +  ' <label>Days</label></span> <span class="hours">' + hours + ' <label>Hours</label></span> <span class="minutes">'
+    + minutes + ' <label>Mins</label></span> <span class="seconds">' + seconds + ' <label>Secs</label></span>';
+
+}, 1000);

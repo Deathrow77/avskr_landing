@@ -1,69 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
 body{
   margin: 0;
   padding: 0;
   background-image: url('../img/bg31.png');
   z-index: -1;
-  height: 100%;
-  width: 100%;
-
   width: 100%;
   height: 100vh;
-
-  top: 0;
-  left: 0;
-
+  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-section {
+.box {
   height: 100vh;
   background-image: url('../img/crosshair2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   z-index: 20;
 }
 
-.clock {
-  position: absolute;
-  /* z-index: 10; */
-  top: 89%;
-  display: inline;
-  height: auto;
-  width: 35vw;
-}
-
-.clockbox {
-  position: fixed;
-  left: 32%;
-  z-index : 8;
-}
-
 .fixed-top-left {
-  position: fixed;
-  top: 7px;
-  left: 5px;
-  height:auto;
-  width:18%;
-
+  height: auto;
 }
 
 .fixed-top-right {
-  position: fixed;
-  top: 1vw;
-  right: 1vw;
   height: auto;
-  justify-content: center;
-  width:35%;
+  float: right;
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#countdown {
+  width: 100%;
+  margin-left: 3.5%;
+}
+label {
+  clear: both;
+  display: block;
+}
+#countdown span {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 2em;
+  font-family: 'Anton', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  width: 25%;
+  dispaly: block;
+  float: left;
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  border-radius: 15%;
+}
+#countdown span:last-child {
+  border-right: 1px solid #313233;
+}
+
+.timer {
+  margin: 0 auto;
+  width: 20%;
+  text-align: center;
 }
 
 .icons-social  {
-padding:0;
-position:absolute;
-bottom:2%;
-font-size:4vh;
-/* justify-content: center; */
-margin-right: 185%;
+font-size:5vh;
+text-align: center;
+}
+
+.bullet {
+  float: right;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  width: 8vw;
+  height: 8 vh;
 }
 
 .icons-social a {
@@ -78,26 +102,19 @@ margin-right: 185%;
   padding-left: 0vh;
   padding-right: 0vh;
   padding-bottom: 0vh;
-	margin-right:2.5vh;
-  margin-left:2.5vh;
+	margin-right:1.5vh;
+  margin-left:1.5vh;
 }
 
 
-@media only screen and (max-width: 600px) {
-    section {
-        background-size: cover;
-    }
-}
-
-.bullet {
-  position: fixed;
-  top: 88%;
-  left: 90%;
-  width: 8vw;
-  height: 8 vh%;
-}
-
-.footer {
-  position: fixed;
-
+@media only screen and (max-width: 800px) {
+  .fixed-top-right {
+    display: none;
+  }
+  .bullet {
+    display: none;
+  }
+  #countdown {
+    margin-bottom: 22%;
+  }
 }
