@@ -41,6 +41,7 @@ body{
   position: fixed;
   bottom: 0;
   width: 100%;
+  display: flex;
   z-index: 1000000;
 }
 
@@ -91,11 +92,24 @@ position: absolute;
   }
 
   .icons-social  {
-  font-size:5vh;
+  font-size:2rem;
   text-align: center;
-  position: absolute;
-  top: 20vh;
-  right: 10vh;
+  transform: translateY(-20vh);
+  }
+
+  .countdown{
+    top:60vh;
+  }
+  
+  .countdown li span{
+    font-size:80%;
+  }
+
+}
+
+@media only screen and (max-width: 300px){
+  .icons-social{
+    display: none;
   }
 }
 
