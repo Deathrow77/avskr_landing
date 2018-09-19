@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://rawgit.com/AllThingsSmitty/e42d5dbd4f548b2a4ddbf442627a897f/raw/7bff268eb57a48dee44f23ffd14b4ea146db162b/flexbox-center-container.css">
   <link rel="stylesheet" type="text/css" href="https://rawgit.com/AllThingsSmitty/8fb1b38c77ddd4357287f242f07c7797/raw/80da7234eaa5a4bb7e27c06c41dd0717ff4f1c93/system-fonts.css">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -27,21 +28,20 @@
 
   <div class="row footer">
     <div class="col-md-3">
-      <div class="icons-social" style="">
-
+      <div class="icons-social">
         <a target="_blank" href="https://www.facebook.com/aavishkar.nitd/"><i class="fab fa-facebook-square icon"></i></a>
         <a target="_blank" href="https://www.instagram.com/aavishkar_nitd/"><i class="fab fa-instagram icon"></i></a>
         <a target="_blank" href="https://www.youtube.com/channel/UCl42je3Zr5zTCpsHIj7xkbg/featured"><i class="fab fa-youtube-square icon"></i></a>
         <a target="_blank" href="mailto:contact@avskr.in"><i class="fa fa-envelope icon fab"></i></a>
-
+        <!-- <hr class="phone-display"> -->
       </div>
     </div>
     <div class="col-md-6">
       <ul class='countdown'>
-        <li><span id="days"></span>days</li>
-        <li><span id="hours"></span>Hours</li>
-        <li><span id="minutes"></span>Minutes</li>
-        <li><span id="seconds"></span>Seconds</li>
+        <li><span id="days"></span><div class="sub">days</div></li>
+        <li><span id="hours"></span><div class="sub">Hours</div></li>
+        <li><span id="minutes"></span><div class="sub">Minutes</div></li>
+        <li><span id="seconds"></span><div class="sub">Seconds</div></li>
       </ul>
     </div>
     <div class="col-md-3">
@@ -64,7 +64,7 @@ $(document).ready(function(){
        wrapContent: true
      });
 });
- 
+
   // change background size on window resize
 $(window).resize(function() {
       $(".bg > .ibg-bg").css({
