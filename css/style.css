@@ -41,52 +41,26 @@ body{
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-
-#countdown {
-  width: 100%;
-  margin-left: 3.5%;
-}
-label {
-  clear: both;
-  display: block;
-}
-#countdown span {
-  background-color: transparent;
-  color: #FFF;
-  font-size: 2em;
-  font-family: 'Anton', sans-serif;
-  font-weight: normal;
-  text-align: center;
-  width: 25%;
-  display: block;
-  float: left;
-  border-left: 1px solid #FFF;
-  border-right: 1px solid #FFF;
-  border-radius: 15%;
-}
-#countdown span:last-child {
-  border-right: 1px solid #313233;
-}
-
-.timer {
-  margin: 0 auto;
-  width: 20%;
-  text-align: center;
+  z-index: 1000000;
 }
 
 .icons-social  {
 font-size:5vh;
 text-align: center;
+position: absolute;
+  top: 10vh;
+  right: 10vh;
 }
 
 .bullet {
-  float: right;
-  margin-right: 5%;
-  margin-bottom: 2%;
+  position: absolute;
+  top: 8vh;
+  right: 10vh;
   width: 8vw;
-  height: 8 vh;
+  margin: 0 auto;
+  text-align: center;
 }
+
 
 .icons-social a {
 	color: #FAFAFA;
@@ -112,10 +86,40 @@ text-align: center;
   .bullet {
     display: none;
   }
-  #countdown {
-    margin-bottom: 22%;
-  }
   .box{
     background-size: cover;
   }
+
+  .icons-social  {
+  font-size:5vh;
+  text-align: center;
+  position: absolute;
+  top: 20vh;
+  right: 10vh;
+  }
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.countdown{
+  z-index: 10000000;
+  text-align: center;
+}
+
+
+li {
+  display: inline-block;
+  font-size: 0.8em;
+  list-style-type: none;
+  padding: 1%;
+  text-transform: uppercase;
+  color:white;
+  z-index: 1000000!important;
+}
+
+li span {
+  display: block;
+  font-size: 4rem;
 }
