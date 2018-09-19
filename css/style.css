@@ -15,11 +15,11 @@ body{
 
 .box {
   height: 100vh;
-  background-image: url('../img/crosshair2.png');
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  overflow: none;
   z-index: 20;
 }
 
@@ -37,6 +37,7 @@ body{
   position: fixed;
   top: 0;
   width: 100%;
+  z-index:100;
 }
 
 .footer {
@@ -61,7 +62,7 @@ label {
   font-weight: normal;
   text-align: center;
   width: 25%;
-  dispaly: block;
+  display: block;
   float: left;
   border-left: 1px solid #FFF;
   border-right: 1px solid #FFF;
@@ -116,5 +117,8 @@ text-align: center;
   }
   #countdown {
     margin-bottom: 22%;
+  }
+  .box{
+    background-size: cover;
   }
 }

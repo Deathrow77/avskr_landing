@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <div class="box"></div>
+  <div class="box bg" data-ibg-bg='./img/crosshair2.png'></div>
 
   <div class="row footer">
     <div class="col-md-3">
@@ -43,12 +43,28 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script src="./js/jquery.backgroundMove.js"></script>
+  <script src="./js/jquery.interactive_bg.min.js"></script>
   <script>
-    $('.box').backgroundMove();
-    $('.box').backgroundMove({
-      movementStrength:'200'
-    });
+
+$(document).ready(function(){
+    $(".bg").interactive_bg(); // function cal
+
+    $(".bg").interactive_bg({
+       strength: 100,
+       scale: 1.1,
+       animationSpeed: "100ms",
+       contain: false,
+       wrapContent: true
+     });
+});
+ 
+  // change background size on window resize
+$(window).resize(function() {
+      $(".bg > .ibg-bg").css({
+        width: $(window).outerWidth(),
+        height: $(window).outerHeight()
+      })
+   });
   </script>
   <script src="js/script.js"></script>
   </body>
