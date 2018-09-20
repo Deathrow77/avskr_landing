@@ -8,8 +8,11 @@ body{
   margin: 0;
   padding: 0;
   background-image: url('../img/bg.jpg');
+  background-position: center center center;
+  background-origin: center;
+  background-color: black;
   z-index: -1;
-  width: 100%;
+  width: 110%;
   height: 100vh;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -19,7 +22,7 @@ body{
 
 .box {
   height: 100vh;
-  width: 120%;
+  width: 200%;
   overflow: none;
   z-index: 20;
 }
@@ -113,7 +116,7 @@ body{
   padding: 0;
   background-image: url('../img/bg.jpg');
   z-index: -1;
-  width: 100%;
+  width: 130%;
   height: 100vh;
   overflow: hidden;
   background-repeat: no-repeat;
