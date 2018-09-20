@@ -132,6 +132,7 @@ body{
   }
   .box{
     background-size: cover;
+    width: 200%!important;
   }
 
   .icons-social  {
