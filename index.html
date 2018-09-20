@@ -25,48 +25,62 @@
   </div>
 
   <div class="box bg" data-ibg-bg='./img/crosshair2.png'></div>
-<div class="footer">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="icons-social">
-        <a target="_blank" href="https://www.facebook.com/aavishkar.nitd/"><i class="fab fa-facebook-square icon"></i></a>
-        <a target="_blank" href="https://www.instagram.com/aavishkar_nitd/"><i class="fab fa-instagram icon"></i></a>
-        <a target="_blank" href="https://www.youtube.com/channel/UCl42je3Zr5zTCpsHIj7xkbg/featured"><i class="fab fa-youtube-square icon"></i></a>
-        <a target="_blank" href="mailto:contact@avskr.in"><i class="fa fa-envelope icon fab"></i></a>
-        <!-- <hr class="phone-display"> -->
-      </div>
+
+  <div class="row footer">
+    <div class="col-md-4">
+        <div class="icons-social">
+            <ul>
+              <li><a target="_blank" href="https://www.facebook.com/aavishkar.nitd/"><i class="fab fa-facebook-square icon"></i></a></li>
+              <li><a target="_blank" href="https://www.instagram.com/aavishkar_nitd/"><i class="fab fa-instagram icon"></i></a></li>
+              <li><a target="_blank" href="https://www.youtube.com/channel/UCl42je3Zr5zTCpsHIj7xkbg/featured"><i class="fab fa-youtube-square icon"></i></a></li>
+              <li><a target="_blank" href="mailto:contact@avskr.in"><i class="fa fa-envelope icon fab"></i></a></li>
+            </ul>
+            <!-- <hr class="phone-display"> -->
+          </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
-      <ul class='countdown'>
-        <li><span id="days"></span><div class="sub">days</div></li>
-        <li><span id="hours"></span><div class="sub">Hours</div></li>
-        <li><span id="minutes"></span><div class="sub">Minutes</div></li>
-        <li><span id="seconds"></span><div class="sub">Seconds</div></li>
-      </ul>
+    <div class="col-md-4">
+        <ul class='countdown'>
+            <li><span id="days"></span><div class="sub">days</div></li>
+            <li><span id="hours"></span><div class="sub">Hours</div></li>
+            <li><span id="minutes"></span><div class="sub">Minutes</div></li>
+            <li><span id="seconds"></span><div class="sub">Seconds</div></li>
+          </ul>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
       <img src="img/bullet.png" class="bullet">
     </div>
   </div>
-</div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script src="./js/jquery.interactive_bg.min.js"></script>
   <script>
 
 $(document).ready(function(){
     $(".bg").interactive_bg(); // function cal
-
-    $(".bg").interactive_bg({
-       strength: 20,
-       scale: 1.1,
-       animationSpeed: "100ms",
-       contain: false,
-       wrapContent: true
-     });
+    function detectmob() {
+      if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    if(!detectmob()){
+      $(".bg").interactive_bg({
+        strength: 40,
+        scale: 1.1,
+        animationSpeed: "100ms",
+        contain: false,
+        wrapContent: true
+      });
+    }else{
+      $(".bg").interactive_bg({
+        strength: 10,
+        scale: 1.05,
+        animationSpeed: "100ms",
+        contain: false,
+        wrapContent: true
+      });
+    }
 });
 
   // change background size on window resize
