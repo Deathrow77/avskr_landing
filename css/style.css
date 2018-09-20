@@ -19,7 +19,7 @@ body{
 
 .box {
   height: 100vh;
-  width: 110%;
+  width: 120%;
   overflow: none;
   z-index: 20;
 }
