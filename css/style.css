@@ -15,7 +15,7 @@ body{
   height: 100vh;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 
@@ -176,7 +176,6 @@ body{
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 }
 
